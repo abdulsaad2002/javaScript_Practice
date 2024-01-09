@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demonstrating pallindrome number with arrays</title>
+</head>
+<body>
+	<div>
+		2. write a program to read dynamic values into an array and list out all the pallindrome numbers within it
+	</div>
+
+<script type="text/javascript">
+	
+var num = [];
+
+var user = prompt("how many inputs yo have enter");
+
+for (i = 0; i < user; i++) {
+	num[i] = prompt("enter value of " + i);
+	num[i] = parseInt(num[i]);
+}
+console.log(num);
+
+var store = 0;
+while (num[0] > 0) {
+	rem = num[0] % 10;
+	store = store* 10 + rem;
+	num[0] = num[0] / 10;
+	num[0] = parseInt(num[0]);
+}
+if (num[0] == store) {
+	console.log(store + "pallindrome")
+}else {
+	console.log(store + "not")
+}
+
+
+
+	
+ 
+</script>
+</body>
+</html>
